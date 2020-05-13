@@ -1,13 +1,19 @@
 #!/usr/bin/env ruby
 
-# libraries
+require 'nokogiri'
+require 'open-uri'
 
-# add link to the page which is going to be scraped
+patch_notes = 'https://na.leagueoflegends.com/en-us/news/tags/patch-notes'
+
+doc = Nokogiri::HTML(URI.open(patch_notes))
 
 puts 'This program shows you the last 6 patches of the League of Legends video game'
 puts 'You can choose one of them to see the stats changes of champions and items in that patch'
+puts
 
-# print versions patches with a number in the right side as a reference
+doc.xpath("//h2[@class = 'style__Title-i44rc3-8 jprNto']").each_with_index do |link, count|
+    puts "#{count + 1}.-#{link.content}"
+end
 
 # validate if the choice is valid
 
