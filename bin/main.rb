@@ -5,12 +5,12 @@ puts 'You can choose one of them to see the stats changes of champions and items
 
 # print versions patches with a number in the right side as a reference
 
-# validate if the choice is valid
-
 puts 'Select the version patch where are the changes that you want to see'
 puts 'To choose you need to write the number on the left side of the patch you want to see'
 
 # add the choice of the user to a variable
+
+# validate if the choice is valid
 
 # get the link of the patch page that the user chose
 
