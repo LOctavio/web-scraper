@@ -1,3 +1,6 @@
+require 'nokogiri'
+require 'open-uri'
+
 class PageData
   def  initialize()
     @PAGE_URL = 'https://na.leagueoflegends.com'
