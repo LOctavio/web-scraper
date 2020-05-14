@@ -21,4 +21,11 @@ end
 
 page_data.choice = choice.user_input
 
-# show all the changes applied in the patch
+page_data.show_list do |x|
+  case x.name
+  when 'h3' then print ' - '
+  when 'h4' then print '    '
+  when 'div' then print '     - '
+  end
+  puts x.content.lstrip
+end

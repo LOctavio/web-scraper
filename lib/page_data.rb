@@ -21,9 +21,20 @@ class PageData
     @page_url << @doc.xpath(path)[@choice - 1]
   end
 
+  def show_list
+    fetch_page
+    val = false
+    @doc.xpath("//h2 | //h3 | //h4 | //div[@class = 'attribute-change']").each do |link|
+      if link.name == 'h2'
+        val = link.content == 'Champions' || link.content == 'Items' ? true : false
+      end
+      yield link if val
+    end
+  end
+
   private
 
   def fetch_page
-    @doc = Nokogiri::HTML(URI.open(@page_url + patch_page))
+    @doc = Nokogiri::HTML(URI.open(patch_page))
   end
 end
