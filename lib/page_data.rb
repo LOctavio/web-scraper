@@ -20,4 +20,10 @@ class PageData
     path = "//a[@class = 'style__Wrapper-i44rc3-0 style__ResponsiveWrapper-i44rc3-13 gkCnQM isVisible']//@href"
     @page_url << @doc.xpath(path)[@choice - 1]
   end
+
+  private
+
+  def fetch_page
+    @doc = Nokogiri::HTML(URI.open(@page_url + patch_page))
+  end
 end
