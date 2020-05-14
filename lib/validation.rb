@@ -2,9 +2,6 @@ class Validation
   attr_accessor :user_input
 
   def valid?
-    (1..6).each do |x|
-      return true if x == @user_input
-    end
-    false
+    @user_input >= 1 && @user_input <= 6 ? true : false
   end
 end
