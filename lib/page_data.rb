@@ -11,8 +11,8 @@ class PageData
   end
 
   def last_patches
-    @doc.xpath("//h2[@class = 'style__Title-i44rc3-8 jprNto']").each_with_index do |link, count|
-      puts "#{count + 1}.-#{link.content}"
+    @doc.xpath("//h2[@class = 'style__Title-i44rc3-8 jprNto']").each_with_index do |link, index|
+      yield(link, index)
     end
   end
 
@@ -21,7 +21,7 @@ class PageData
     @page_url << @doc.xpath(path)[@choice - 1]
   end
 
-  def show_list
+  def changes_list
     fetch_page
     val = false
     @doc.xpath("//h2 | //h3 | //h4 | //div[@class = 'attribute-change']").each do |link|

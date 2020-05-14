@@ -9,7 +9,7 @@ choice = Validation.new
 puts 'This program shows you the last 6 patches of the League of Legends video game'
 puts 'You can choose one of them to see the stats changes of champions and items in that patch'
 puts
-page_data.last_patches
+page_data.last_patches { |x, index| puts "#{index + 1}.-#{x.content}" }
 puts
 puts 'Select the version patch where are the changes that you want to see'
 puts 'To choose you need to write the number(A number between 1 and 6) on the left side of the patch you want to see'
@@ -21,7 +21,7 @@ end
 
 page_data.choice = choice.user_input
 
-page_data.show_list do |x|
+page_data.changes_list do |x|
   case x.name
   when 'h3' then print ' - '
   when 'h4' then print '    '
