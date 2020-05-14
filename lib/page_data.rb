@@ -16,11 +16,6 @@ class PageData
     end
   end
 
-  def patch_page
-    path = "//a[@class = 'style__Wrapper-i44rc3-0 style__ResponsiveWrapper-i44rc3-13 gkCnQM isVisible']//@href"
-    @page_url << @doc.xpath(path)[@choice - 1]
-  end
-
   def changes_list
     fetch_page
     val = false
@@ -33,6 +28,11 @@ class PageData
   end
 
   private
+
+  def patch_page
+    path = "//a[@class = 'style__Wrapper-i44rc3-0 style__ResponsiveWrapper-i44rc3-13 gkCnQM isVisible']//@href"
+    @page_url << @doc.xpath(path)[@choice - 1]
+  end
 
   def fetch_page
     @doc = Nokogiri::HTML(URI.open(patch_page))
