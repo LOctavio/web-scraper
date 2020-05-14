@@ -18,7 +18,7 @@ loop do
   choice.user_input = gets.to_i
   choice.valid? ? break : puts('that is not a number between 1 and 6, try again')
 end
-puts
-# get the link of the patch page that the user chose
+
+page_data.choice = choice.user_input
 
 # show all the changes applied in the patch
