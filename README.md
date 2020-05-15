@@ -8,7 +8,7 @@
 
 The information this program takes is the champions and item updates of the League of Leguends game.
 
-Every two weeks there are some patches inside the game, and this program takes several sections of each patch and shows that data to the user.
+Every two weeks there are some patches inside the game, and this program takes some data of each patch and shows that data to the user.
 
 This program can't access to all the patches, just can access to the last 6 of them.
 
@@ -30,7 +30,7 @@ You need to follow the next instructions if you want to use the program
 
   - If you want to see another patch, write 'yes' inside the terminal
 
-  -If you want to finish the program just write 'no' inside the terminal
+  - If you want to finish the program just write 'no' inside the terminal
 
 ## Built With
 
