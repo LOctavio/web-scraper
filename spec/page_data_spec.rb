@@ -1,4 +1,4 @@
-require './lib/page_data.rb'
+require_relative '../lib/page_data.rb'
 describe PageData do
   let(:page_data) { PageData.new }
   describe '#last_patches' do

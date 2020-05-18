@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/page_data'
-require './lib/validation'
+require_relative '../lib/page_data'
+require_relative '../lib/validation'
 
 loop do
   page_data = PageData.new

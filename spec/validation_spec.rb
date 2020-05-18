@@ -1,4 +1,4 @@
-require './lib/validation.rb'
+require_relative '../lib/validation.rb'
 describe Validation do
   let(:validation) { Validation.new }
   describe '#valid_choice?' do
