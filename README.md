@@ -35,6 +35,10 @@ You need to follow the next instructions if you want to use the program
 ## Built With
 
 - Ruby
+  - Gems used:
+    - nokogiry
+    - rspec
+    - open-uri
 
 ## Live Demo
 
@@ -54,7 +58,11 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Clone the repoitory on your local enviroment
+Clone the repository on your local environment.
+To clone the project you need to run the following command:
+
+- Clone with HTTPS: git clone https://github.com/LOctavio/web-scraper.git
+- Clone with SSH: git clone git@github.com:LOctavio/web-scraper.git
 
 ### Usage
 
@@ -81,6 +89,11 @@ Feel free to check the [issues page](https://github.com/LOctavio/web-scraper/iss
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Riot Games
 
 ## 📝 License
 
